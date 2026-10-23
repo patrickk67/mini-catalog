@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f5f0">
+  <title>Little Market — Find your everyday favorites</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js" defer></script>
+  <script src="/js/products.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="/"><span class="brand-mark">l.</span><span>little<span class="brand-light">market</span></span></a>
+  <nav class="main-nav" aria-label="Main navigation">
+    <a class="active" href="/">Home</a><a href="#catalog">Shop</a><a href="#story">Our story</a>
+  </nav>
+  <div class="header-actions">
+    <a class="admin-link" href="/admin.html">Manage</a>
+    <a class="cart-link" href="/cart.html" aria-label="Shopping cart"><span class="cart-icon">♧</span><span>Bag</span><span id="cart-count" class="cart-count">0</span></a>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow"><span class="eyebrow-dot"></span> SMALL FINDS, BIG JOY</span>
+      <h1>Good things<br>for <em>everyday</em> living.</h1>
+      <p>Thoughtful essentials, little luxuries, and new favorites — all in one happy place.</p>
+      <a class="button button-dark" href="#catalog">Explore the collection <span>↗</span></a>
+      <div class="hero-note"><span class="avatar-stack"><i>✦</i><i>♡</i><i>✿</i></span><span>Loved by curious shoppers everywhere</span></div>
+    </div>
+    <div class="hero-art">
+      <div class="hero-image"></div>
+      <div class="floating-note note-top"><span>✳</span> Made for your moments</div>
+      <div class="floating-note note-bottom"><span class="note-star">✦</span><div><strong>Little things matter.</strong><small>Find your next favorite.</small></div></div>
+      <span class="art-scribble">✳</span>
+    </div>
+  </section>
+
+  <section class="trust-row">
+    <div><span class="trust-icon">✧</span><span><strong>Curated with care</strong><small>Good picks, no guesswork</small></span></div>
+    <div><span class="trust-icon">♡</span><span><strong>Everyday prices</strong><small>Little treats that feel good</small></span></div>
+    <div><span class="trust-icon">↗</span><span><strong>Easy browsing</strong><small>Find your thing, your way</small></span></div>
+  </section>
+
+  <section id="catalog" class="catalog-section">
+    <div class="section-heading">
+      <div><span class="eyebrow">THE GOOD STUFF</span><h2>Find your <em>favorite.</em></h2><p>Useful things, lovely details, and a few unexpected delights.</p></div>
+      <span class="result-count" id="result-count">Loading collection…</span>
+    </div>
+    <div class="catalog-toolbar">
+      <label class="search-box"><span>⌕</span><input id="search-input" type="search" placeholder="Search something lovely…" aria-label="Search products"><kbd>⌘ K</kbd></label>
+      <div class="toolbar-filters">
+        <select id="category-filter" aria-label="Filter by category"><option value="">All categories</option></select>
+        <select id="sort-select" aria-label="Sort products"><option value="featured">Featured</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="name">Name: A to Z</option></select>
+      </div>
+    </div>
+    <div id="category-chips" class="category-chips"></div>
+    <div id="product-grid" class="product-grid"><div class="loading-state">Finding the good stuff<span class="loading-dots"> ···</span></div></div>
+    <div id="empty-state" class="empty-state hidden"><span>☁</span><h3>No little finds here</h3><p>Try another search or clear your filters.</p><button class="button button-outline" id="reset-filters">Clear filters</button></div>
+  </section>
+
+  <section id="story" class="story-banner">
+    <div class="story-mark">l.</div><div><span class="eyebrow">A LITTLE ABOUT US</span><h2>Less scrolling.<br><em>More finding.</em></h2></div>
+    <p>We believe the best everyday things are the ones that make you smile. Browse a considered collection of useful, joyful finds for your space, your style, and your life.</p>
+    <a href="#catalog" class="story-arrow" aria-label="Browse products">↗</a>
+  </section>
+</main>
+<footer class="site-footer"><a class="brand" href="/"><span class="brand-mark">l.</span><span>little<span class="brand-light">market</span></span></a><p>Everyday things. A little more lovely.</p><span>© 2026 Little Market · Student project demo</span></footer>
+
+<div id="product-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-backdrop" data-close-modal></div><div class="modal-card"><button class="modal-close" data-close-modal aria-label="Close details">×</button><div id="modal-content"></div></div>
+</div>
+<div id="toast-region" class="toast-region" aria-live="polite"></div>
+</body>
+</html>
